@@ -2,10 +2,10 @@ import os, json, io
 
 def file_reader(massJson):
     for file_name in massJson:
-        if 'ru' in file_name:
+        if 'en' in file_name:
             lang = 'en'
-        if 'kz' in file_name:
-            lang = 'kz'
+        if 'fr' in file_name:
+            lang = 'fr'
         with io.open(file_name, 'r', encoding="utf-8") as f:
             print(f)
             json_obj = json.loads(f.read(), strict=False)
